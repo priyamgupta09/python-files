@@ -1,4 +1,4 @@
-#Factorial using tabulation DP
+#Factorial using tabulation Dynamic Programming
 
 def fact(x):
     f=[0]*100
