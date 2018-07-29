@@ -1,4 +1,5 @@
-def checkUgly(num):
+#program without DP
+'''def checkUgly(num):
     while(num%2 == 0):
         num /= 2
     while(num%3 == 0):
@@ -20,4 +21,33 @@ def uglyNum(num):
         i+=1
     return i-1
 
-print(uglyNum(150))
+print(uglyNum(150))'''
+
+#program with DP
+
+def UglyNum(num):
+    i=1
+    numList = [1]*num
+    x,y,z = 0,0,0
+    nextUglyNum2=numList[x]*2
+    nextUglyNum3=numList[y]*3
+    nextUglyNum5=numList[z]*5
+
+    while(i<num):
+        nextMin = min(nextUglyNum2,nextUglyNum3,nextUglyNum5)
+        numList[i] = nextMin
+
+        if(numList[i]==nextUglyNum2):
+            x+=1
+            nextUglyNum2=numList[x]*2
+        if(numList[i]==nextUglyNum3):
+            y+=1
+            nextUglyNum3=numList[y]*3
+        if(numList[i]==nextUglyNum5):
+            z+=1
+            nextUglyNum5=numList[z]*5
+        i+=1
+    return numList
+
+print(UglyNum(150))
+        
