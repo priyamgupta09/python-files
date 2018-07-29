@@ -9,5 +9,5 @@ def profit(year, be, en):
     b = profit(year+1, be, en-1) + year*p[en]
     return max(a,b)
     
-
-print(profit(1,0,4))
+#
+#print(profit(1,0,4))
