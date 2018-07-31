@@ -19,7 +19,6 @@ def CalMinMoves(key, fishes):
             key+=fishes[i]
     return moves
         
-
 startTime=datetime.now()
 s="10#50,60,70,80,1000,2000,3000"
 x,y=s.split('#')
